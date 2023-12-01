@@ -1,0 +1,40 @@
+<!-- app.component.html -->
+<div class="container">
+    <span class="d-block text-center display-3" style="margin-top: 5%;">Cifrado y Descifrado de Datos</span>
+
+    <div class="d-flex justify-content-center mt-3">
+        <div class="row" style="margin-top: 7%;">
+            <!-- Primera columna - Input para la clave de encriptación -->
+            <div class="col">
+                <label for="clave" class="form-label">Clave de encriptación:</label>
+                <input type="text" class="form-control" id="clave" [(ngModel)]="clave" />
+            </div>
+
+            <!-- Segunda columna - Textarea principal -->
+            <div class="col">
+                <label for="texto" class="form-label">Texto a encriptar:</label>
+                <textarea rows="10" cols="60" id="texto" [(ngModel)]="texto" class="form-control"></textarea>
+            </div>
+          
+        </div>
+    </div>
+
+    <!-- Botones de encriptar/descriptar -->
+    <div class="d-flex justify-content-center mt-4">
+        <!-- Ajusta el evento al método correspondiente -->
+        <button type="button" class="btn btn-success mx-2" (click)="encriptar()">Encriptar/Desencriptar</button>
+
+    </div>
+
+    <!-- Resultado -->
+    <div class="d-flex justify-content-center mt-4">
+        <label for="resultado" class="form-label">Resultado:</label>
+        <textarea rows="10" cols="60" id="resultado" [(ngModel)]="resultado" class="form-control" readonly></textarea>
+    </div>
+    <!-- Resultado -->
+    <div class="d-flex justify-content-center mt-4">
+        <label for="resultadoDes" class="form-label">Resultado:</label>
+        <textarea rows="10" cols="60" id="resultadoDes" [(ngModel)]="resultadoDes" class="form-control" readonly></textarea>
+    </div>
+
+</div>
